@@ -58,7 +58,7 @@ download_release() {
     platform=$(get_platform)
 
     # TODO: Adapt the release URL convention for just
-    url="$GH_REPO/releases/download/v${version}/just-v${version}-${platform}.tar.gz"
+    url="$GH_REPO/releases/download/${version}/just-${version}-${platform}.tar.gz"
 
     echo "* Downloading just release $version..."
     curl "${curl_opts[@]}" -o "$filename" -C - "$url" || fail "Could not download $url"
